@@ -97,6 +97,18 @@ Source: `addyosmani/web-quality-skills` — installed at `.agents/skills/`
 
 Source: `dralgorhythm/claude-agentic-framework` — installed at `.agents/skills/`
 
+**Next.js Skills (claude-nextjs-skills-main.zip):**
+- `nextjs-app-router-fundamentals` — App Router patterns (layouts, routing, metadata)
+- `nextjs-anti-patterns` — Common mistakes to avoid
+- `nextjs-server-client-components` — When to use server vs client components
+- `nextjs-dynamic-routes-params` — For `/contacts/[id]` per-person pages
+- `nextjs-advanced-routing` — Multi-screen app routing
+- `nextjs-client-cookie-pattern` — Auth session handling
+- `nextjs-server-navigation` — Navigation between screens
+- `nextjs-pathname-id-fetch` — Fetching contact data by ID
+
+Source: manual install — `.agents/skills/`
+
 ## Context
 
 This animation is the first piece of a larger networking tool. The full app will have:
