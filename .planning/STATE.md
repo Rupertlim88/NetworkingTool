@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 01-project-setup-01-01-PLAN.md
-last_updated: "2026-03-05T04:10:21.841Z"
+stopped_at: Completed 01-project-setup-01-02-PLAN.md
+last_updated: "2026-03-05T04:32:01.480Z"
 last_activity: 2026-03-04 — Roadmap created, phases derived from requirements
 progress:
   total_phases: 6
-  completed_phases: 0
+  completed_phases: 1
   total_plans: 2
-  completed_plans: 1
+  completed_plans: 2
   percent: 50
 ---
 
@@ -51,6 +51,7 @@ Progress: [█████░░░░░] 50%
 
 *Updated after each plan completion*
 | Phase 01-project-setup P01 | 15 | 2 tasks | 9 files |
+| Phase 01-project-setup P02 | 30 | 3 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -64,6 +65,8 @@ Recent decisions affecting current work:
 - Project init: Animation-first build order — animation is the hardest piece, build it standalone
 - [Phase 01-project-setup]: Tailwind v4 CSS-first config: @config directive in globals.css imports tailwind.config.ts for color token extension
 - [Phase 01-project-setup]: Theme switching via data-theme attribute on html element — both Teal and Midnight Blue themes defined as CSS custom property blocks
+- [Phase 01-project-setup]: Star semantic colors locked as lib/constants.ts constants (yellow #f59e0b recently talked, blue #22d3ee produced real outcome) — never change with theme
+- [Phase 01-project-setup]: gsap.registerPlugin(useGSAP) at module level in index.tsx — ensures single registration per bundle, not inside component
 
 ### Pending Todos
 
@@ -75,6 +78,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-05T04:10:21.838Z
-Stopped at: Completed 01-project-setup-01-01-PLAN.md
+Last session: 2026-03-05T04:32:01.478Z
+Stopped at: Completed 01-project-setup-01-02-PLAN.md
 Resume file: None

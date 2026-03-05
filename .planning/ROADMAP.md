@@ -12,7 +12,7 @@ Six phases build the app foundation and animation from the outside in: first a s
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Project Setup** - React + TypeScript + GSAP scaffold with self-contained component folder structure
+- [x] **Phase 1: Project Setup** - React + TypeScript + GSAP scaffold with self-contained component folder structure (completed 2026-03-05)
 - [ ] **Phase 2: Visual Foundation** - Rough contact grid, portrait cards, popup overlay, theme switcher — validates visual direction before animation
 - [ ] **Phase 3: Component API** - Clean props interface and TypeScript types; component renders without errors
 - [ ] **Phase 4: Animation Core** - Full-screen overlay, dark void, photo card visible, stars launch with squash/stretch arc at 60fps
@@ -114,7 +114,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Project Setup | 1/2 | In Progress|  |
+| 1. Project Setup | 2/2 | Complete   | 2026-03-05 |
 | 2. Visual Foundation | 0/? | Not started | - |
 | 3. Component API | 0/? | Not started | - |
 | 4. Animation Core | 0/? | Not started | - |
