@@ -33,6 +33,10 @@ The animation must feel genuinely exciting and game-like — not a UI transition
 - Authentication, data layer, backend — future milestone
 - Mobile / React Native — future milestone
 
+## Reference Files
+
+- `GSAPSKILL.md` (project root) — GSAP best practices, React integration patterns (`useGSAP` hook, timeline sequencing, easing functions, squash/stretch via `scaleX`/`scaleY`). Planning and execution agents should read this before implementing animation code.
+
 ## Context
 
 This animation is the first piece of a larger networking tool. The full app will have:
