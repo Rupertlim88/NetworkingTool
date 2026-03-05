@@ -39,9 +39,9 @@
 
 ### Integration
 
-- [ ] **INT-01**: Component has zero dependencies on any networking app data layer
-- [ ] **INT-02**: Component is a self-contained folder (component + assets + types)
-- [ ] **INT-03**: Component can be dropped into any React app via a single import
+- [x] **INT-01**: Component has zero dependencies on any networking app data layer
+- [x] **INT-02**: Component is a self-contained folder (component + assets + types)
+- [x] **INT-03**: Component can be dropped into any React app via a single import
 
 ## v2 Requirements
 
@@ -66,9 +66,9 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| INT-01 | Phase 1: Project Setup | Pending |
-| INT-02 | Phase 1: Project Setup | Pending |
-| INT-03 | Phase 1: Project Setup | Pending |
+| INT-01 | Phase 1: Project Setup | Complete |
+| INT-02 | Phase 1: Project Setup | Complete |
+| INT-03 | Phase 1: Project Setup | Complete |
 | API-01 | Phase 2: Component API | Pending |
 | API-02 | Phase 2: Component API | Pending |
 | API-03 | Phase 2: Component API | Pending |
