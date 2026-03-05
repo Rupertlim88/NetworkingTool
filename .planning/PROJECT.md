@@ -69,7 +69,7 @@ The animation must feel genuinely exciting and game-like — not a UI transition
 - Contact detail blur overlay — Milestone 2
 - Star color display on cards — Milestone 2
 - Authentication, data layer, backend — future milestone
-- Mobile / React Native — future milestone
+- Mobile / cross-platform — future milestone (see note below)
 
 ## Reference Files
 
@@ -95,6 +95,8 @@ Source: `addyosmani/web-quality-skills` — installed at `.agents/skills/`
 - `application-security`, `identity-access` — Relevant for auth milestone
 - `designing-apis` — Relevant for component props API and future backend
 
+Note: `tailwind-css` (generic) and `framer-motion` removed — replaced by stack-specific Tailwind skill; project uses GSAP not Framer Motion.
+
 Source: `dralgorhythm/claude-agentic-framework` — installed at `.agents/skills/`
 
 **Next.js Skills (claude-nextjs-skills-main.zip):**
@@ -107,7 +109,10 @@ Source: `dralgorhythm/claude-agentic-framework` — installed at `.agents/skills
 - `nextjs-server-navigation` — Navigation between screens
 - `nextjs-pathname-id-fetch` — Fetching contact data by ID
 
-Source: manual install — `.agents/skills/`
+**Tailwind CSS (timelessco/recollect — Next.js + Supabase context):**
+- `tailwindcss` — Utility-first styling, responsive design, dark mode, component patterns
+
+Source: `npx skillfish add timelessco/recollect tailwindcss` — installed globally at `~/.claude/skills/`
 
 ## Context
 
@@ -148,7 +153,10 @@ The animation component must be designed so the full app can import and call it 
 |-----------|-------|--------|
 | 1 — Animation Component | `StarLevelUpAnimation` standalone React+GSAP component | In Progress |
 | 2 — Contact Grid UI | Card grid, star display, blur overlay modal, detail view | Future |
-| 3 — Full Integration | Connect animation to contact upgrade flow, data layer | Future |
+| 3 — Full Integration | Auth, Supabase data layer, AWS EC2 backend, live deployment | Future |
+| 4 — Mobile / Cross-platform | Extend app to mobile and other devices | Future |
+
+**Note on mobile:** All code should be written with future mobile adaptation in mind. Avoid web-only assumptions where possible. The animation component in particular should be designed so its logic can be ported to React Native / Reanimated later. When making architectural decisions, flag anything that would be hard to adapt to mobile.
 
 ---
 *Last updated: 2026-03-04 after full vision capture*
