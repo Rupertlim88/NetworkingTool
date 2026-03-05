@@ -19,11 +19,16 @@ The animation must feel genuinely exciting and game-like — not a UI transition
 - Star colors: yellow = recently talked, blue = produced a real outcome (referral, job, intro)
 
 ### Contact Detail Overlay
-- Clicking a card expands it into a centered modal
-- Background blurs (the grid blurs behind the overlay — not a new screen, a popup feel)
-- Modal content: name, tags (what they do), full bio/resume description
+- Clicking a card opens a centered rectangle popup (not full-screen)
+- Background blurs on both sides — feels like a popup within the original screen
+- Scrollable content: name, tags (what they do), full bio/resume description
 - Action buttons at bottom: LinkedIn, Gmail, More Info
-- "More Info" opens a custom-built detail screen
+- "More Info" navigates to a dedicated per-person page (separate Next.js route)
+
+### Per-Person Detail Pages
+- Each contact has their own custom page (e.g., /contacts/[id])
+- Custom layout and design per person — not a template, but a crafted page
+- Separate from the popup overlay — this is a full navigable screen
 
 ### Level-Up Trigger
 - User manually clicks a button inside the contact detail overlay to upgrade stars
@@ -80,12 +85,26 @@ This animation is the first piece of a larger networking tool. The full app will
 
 The animation component must be designed so the full app can import and call it with minimal wiring. The component owns the entire visual experience of the level-up sequence.
 
+## Tech Stack
+
+| Layer | Technology | Notes |
+|-------|-----------|-------|
+| Frontend framework | Next.js (App Router) | Hosted on Vercel, file-based routing for multi-screen app |
+| Styling | Tailwind CSS | Standard for Next.js + Vercel projects |
+| Language | TypeScript | No `any` types |
+| Animation | GSAP + @gsap/react | Level-up animation component |
+| Database | Supabase | Contact data, user accounts |
+| Auth | Supabase Auth | Email + verification flow (rupertlim88@gmail.com sender) |
+| Backend | AWS EC2 | Custom backend logic (future milestone) |
+| Hosting | Vercel (frontend) + AWS EC2 (backend) | Custom domain |
+
 ## Key Decisions
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
 | GSAP (GreenSock) for animation | Industry standard for complex sequenced, physics-feeling web animations — far more control than Framer Motion for squash/stretch, arc trajectories, particle effects | — Pending |
-| React + TypeScript | Web-first, type-safe, generalizable | — Pending |
+| Next.js App Router | Multi-screen app (grid, detail pages, auth flow) needs routing. Vercel-native. | — Pending |
+| Supabase for DB + Auth | Handles contact data storage and email auth in one service | — Pending |
 | Animation-first build order | Animation is the backbone and hardest piece. Build it standalone, then build the app around it. | — Pending |
 | Standalone component (zero app dependencies) | Props-only API means this drops into any future app without refactoring | — Pending |
 
