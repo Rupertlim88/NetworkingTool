@@ -86,6 +86,17 @@ The animation must feel genuinely exciting and game-like — not a UI transition
 
 Source: `addyosmani/web-quality-skills` — installed at `.agents/skills/`
 
+**Core Engineering (dralgorhythm/claude-agentic-framework):**
+- `test-driven-development` — Red-Green-Refactor TDD for animation component
+- `debugging` — Systematic troubleshooting for timing/sequencing bugs
+- `refactoring-code` — Safe restructuring patterns
+- `implementing-code` — Clean implementation methodology
+- `testing` — Test writing best practices
+- `application-security`, `identity-access` — Relevant for auth milestone
+- `designing-apis` — Relevant for component props API and future backend
+
+Source: `dralgorhythm/claude-agentic-framework` — installed at `.agents/skills/`
+
 ## Context
 
 This animation is the first piece of a larger networking tool. The full app will have:
