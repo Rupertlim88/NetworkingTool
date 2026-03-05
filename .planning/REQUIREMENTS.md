@@ -66,10 +66,32 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| API-01 through API-07 | Phase 1 | Pending |
-| ANIM-01 through ANIM-12 | Phase 1 | Pending |
-| STAR-01 through STAR-04 | Phase 1 | Pending |
-| INT-01 through INT-03 | Phase 1 | Pending |
+| INT-01 | Phase 1: Project Setup | Pending |
+| INT-02 | Phase 1: Project Setup | Pending |
+| INT-03 | Phase 1: Project Setup | Pending |
+| API-01 | Phase 2: Component API | Pending |
+| API-02 | Phase 2: Component API | Pending |
+| API-03 | Phase 2: Component API | Pending |
+| API-04 | Phase 2: Component API | Pending |
+| API-05 | Phase 2: Component API | Pending |
+| API-06 | Phase 2: Component API | Pending |
+| API-07 | Phase 2: Component API | Pending |
+| ANIM-01 | Phase 3: Animation Core | Pending |
+| ANIM-02 | Phase 3: Animation Core | Pending |
+| ANIM-03 | Phase 3: Animation Core | Pending |
+| ANIM-04 | Phase 3: Animation Core | Pending |
+| ANIM-05 | Phase 3: Animation Core | Pending |
+| ANIM-06 | Phase 3: Animation Core | Pending |
+| ANIM-07 | Phase 3: Animation Core | Pending |
+| ANIM-12 | Phase 3: Animation Core | Pending |
+| STAR-01 | Phase 4: Star Visuals + Particles | Pending |
+| STAR-02 | Phase 4: Star Visuals + Particles | Pending |
+| STAR-03 | Phase 4: Star Visuals + Particles | Pending |
+| STAR-04 | Phase 4: Star Visuals + Particles | Pending |
+| ANIM-08 | Phase 4: Star Visuals + Particles | Pending |
+| ANIM-09 | Phase 5: Impact + Landing | Pending |
+| ANIM-10 | Phase 5: Impact + Landing | Pending |
+| ANIM-11 | Phase 5: Impact + Landing | Pending |
 
 **Coverage:**
 - v1 requirements: 26 total
@@ -78,4 +100,4 @@
 
 ---
 *Requirements defined: 2026-03-04*
-*Last updated: 2026-03-04 after initial definition*
+*Last updated: 2026-03-04 after roadmap creation — individual requirement-to-phase mapping established*
