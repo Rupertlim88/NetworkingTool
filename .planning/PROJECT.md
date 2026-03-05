@@ -75,6 +75,17 @@ The animation must feel genuinely exciting and game-like — not a UI transition
 
 - `GSAPSKILL.md` (project root) — GSAP best practices, React integration patterns (`useGSAP` hook, timeline sequencing, easing functions, squash/stretch via `scaleX`/`scaleY`). Planning and execution agents should read this before implementing animation code.
 
+## Active Skills (auto-loaded by Claude Code)
+
+- `performance` — 60fps animation patterns, resource optimization, avoiding layout thrashing
+- `core-web-vitals` — LCP/INP/CLS optimization for Next.js + Vercel
+- `accessibility` — WCAG 2.1 compliance
+- `best-practices` — General web quality
+- `seo` — Search optimization
+- `web-quality-audit` — Comprehensive quality auditing
+
+Source: `addyosmani/web-quality-skills` — installed at `.agents/skills/`
+
 ## Context
 
 This animation is the first piece of a larger networking tool. The full app will have:
