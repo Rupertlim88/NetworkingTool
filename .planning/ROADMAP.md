@@ -2,7 +2,7 @@
 
 ## Overview
 
-Twelve phases build the app from foundation through polished UI to cinematic animation. Phase 1 scaffolds the project. Phases 2-7 build the visual UI layer: design tokens, contact grid, popup overlay, grid header, filter system, and settings drawer. Phases 8-11 build the star level-up animation component: props API, core animation sequence, star visuals with particles, and the impact burst with landing. Each phase leaves a working, testable state.
+Eleven phases build the app from foundation through polished UI to cinematic animation. Phase 1 scaffolds the project. Phases 2-7 build the visual UI layer: design tokens, contact grid, popup overlay, grid header, filter system, and settings drawer. Phases 8-11 build the star level-up animation component: props API, core animation sequence, star visuals with particles, and the impact burst with landing. Each phase leaves a working, testable state.
 
 ## Phases
 
