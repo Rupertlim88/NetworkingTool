@@ -67,10 +67,10 @@ Plans:
   4. Cards entrance-animate with Z-axis pop and stagger on scroll using GSAP ScrollTrigger
   5. Fixed viewport gradient bleed at top (~20% height, accent colors at 10-15% opacity) does not scroll with content
   6. Grid uses `app/page.tsx` as the home page with mock data from `lib/mock-data.ts`
-**Plans**: TBD
+**Plans**: 1 plan
 
 Plans:
-- [ ] 03-01: TBD
+- [ ] 03-01-PLAN.md — Mock data, ContactCard component, responsive grid layout, GSAP ScrollTrigger Z-axis entrance animation, fixed gradient bleed
 
 ### Phase 4: Popup Overlay
 **Goal**: Clicking a contact card opens a card-expand animation to a centered popup overlay with near-black surface, blur backdrop, full content layout (photo, name, tags, stars, bio/resume, Level Up button, action icons), and multiple close methods
@@ -205,7 +205,7 @@ Note: Phase 7 (Settings Drawer) depends only on Phase 2, not on Phases 3-6. Phas
 |-------|----------------|--------|-----------|
 | 1. Project Setup | 2/2 | Complete | 2026-03-05 |
 | 2. Design Tokens + Theme System | 1/1 | Complete | 2026-03-10 |
-| 3. Contact Grid + Cards | 0/? | Not started | - |
+| 3. Contact Grid + Cards | 0/1 | Not started | - |
 | 4. Popup Overlay | 0/? | Not started | - |
 | 5. Grid Header | 0/? | Not started | - |
 | 6. Filter System + Contact Count | 0/? | Not started | - |
