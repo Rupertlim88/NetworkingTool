@@ -27,20 +27,159 @@ body {
 }
 
 @layer base {
-  /* Theme C — Rich Teal + Soft White (default) */
-  :root,
-  [data-theme="teal"] {
-    --color-grid-bg: #071a2e;
-    --color-card-surface: rgba(255, 255, 255, 0.08);
-    --color-accent-primary: #f59e0b;
-    --color-accent-secondary: #22d3ee;
+  /*
+   * THREE-TIER DESIGN TOKEN ARCHITECTURE
+   *
+   * TIER 1 — Primitives (:root)
+   *   Raw color values. Never referenced by components directly.
+   *   Purpose: single source of truth for color palette.
+   *
+   * TIER 2 — Semantic tokens ([data-theme] blocks)
+   *   Contextual meaning mapped to primitives or raw values.
+   *   Components reference ONLY these tokens via var(--color-*), var(--gradient-*), var(--shadow-*).
+   *
+   * TIER 3 — Component tokens (future, per-component overrides)
+   *   Deferred to respective phase implementations.
+   */
+
+  /* ========================================
+   * TIER 1 — Primitives
+   * ======================================== */
+  :root {
+    --primitive-teal-bg: #071a2e;
+    --primitive-midnight-bg: #0a0f1e;
+    --primitive-amber: #f59e0b;
+    --primitive-cyan: #22d3ee;
+    --primitive-coral: #ff6b6b;
+    --primitive-electric-blue: #4fc3f7;
+    --primitive-surface-dark: #0d0d0d;
+    --primitive-surface-card-dark: #1a1a1a;
+    --primitive-white: #ffffff;
+    --primitive-gold: #fbbf24;
   }
 
-  /* Theme A — Midnight Blue + Warm Coral */
+  /* ========================================
+   * TIER 2 — Semantic Tokens
+   * ======================================== */
+
+  /* Theme: Teal (default) — Rich Teal + Soft White */
+  :root,
+  [data-theme="teal"] {
+    /* Background */
+    --color-grid-bg: #071a2e;
+    --color-card-surface: rgba(255, 255, 255, 0.08);
+    --color-surface-popup: #0d0d0d;
+    --color-surface-action-button: #1a1a1a;
+
+    /* Text */
+    --color-text-primary: #ffffff;
+    --color-text-secondary: rgba(255, 255, 255, 0.7);
+    --color-text-muted: rgba(255, 255, 255, 0.5);
+
+    /* Accent */
+    --color-accent-primary: #f59e0b;
+    --color-accent-secondary: #22d3ee;
+    --color-accent-primary-15: rgba(245, 158, 11, 0.15);
+    --color-accent-secondary-15: rgba(34, 211, 238, 0.15);
+
+    /* Tooltip */
+    --color-tooltip-bg: #071a2e;
+    --color-tooltip-text: #f59e0b;
+
+    /* Swatch */
+    --color-swatch-teal-base: #071a2e;
+    --color-swatch-teal-accent: #f59e0b;
+    --color-swatch-midnight-base: #0a0f1e;
+    --color-swatch-midnight-accent: #ff6b6b;
+
+    /* Gradients */
+    --gradient-header-title: linear-gradient(90deg, #f59e0b, #fbbf24, #f5f5f5, #22d3ee, #0d9488);
+    --gradient-grid-bleed: linear-gradient(180deg, rgba(245, 158, 11, 0.12) 0%, rgba(34, 211, 238, 0.08) 8%, transparent 20%);
+
+    /* Shadows */
+    --shadow-card: 0 4px 6px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.2);
+    --shadow-card-hover-glow: 0 0 20px rgba(245, 158, 11, 0.3);
+    --shadow-header: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Theme: Midnight — Midnight Blue + Warm Coral */
   [data-theme="midnight"] {
+    /* Background */
     --color-grid-bg: #0a0f1e;
     --color-card-surface: #111827;
+    --color-surface-popup: #0d0d0d;
+    --color-surface-action-button: #1a1a1a;
+
+    /* Text */
+    --color-text-primary: #ffffff;
+    --color-text-secondary: rgba(255, 255, 255, 0.7);
+    --color-text-muted: rgba(255, 255, 255, 0.5);
+
+    /* Accent */
     --color-accent-primary: #ff6b6b;
     --color-accent-secondary: #4fc3f7;
+    --color-accent-primary-15: rgba(255, 107, 107, 0.15);
+    --color-accent-secondary-15: rgba(79, 195, 247, 0.15);
+
+    /* Tooltip */
+    --color-tooltip-bg: #0a0f1e;
+    --color-tooltip-text: #ff6b6b;
+
+    /* Swatch */
+    --color-swatch-teal-base: #071a2e;
+    --color-swatch-teal-accent: #f59e0b;
+    --color-swatch-midnight-base: #0a0f1e;
+    --color-swatch-midnight-accent: #ff6b6b;
+
+    /* Gradients */
+    --gradient-header-title: linear-gradient(90deg, #ff6b6b, #f472b6, #e2e2f0, #4fc3f7, #1e3a5f);
+    --gradient-grid-bleed: linear-gradient(180deg, rgba(255, 107, 107, 0.12) 0%, rgba(79, 195, 247, 0.08) 8%, transparent 20%);
+
+    /* Shadows */
+    --shadow-card: 0 4px 6px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.3);
+    --shadow-card-hover-glow: 0 0 20px rgba(255, 107, 107, 0.3);
+    --shadow-header: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Theme: Aurora — Apple Intelligence warm gradient */
+  [data-theme="aurora"] {
+    /* Background */
+    --color-grid-bg: #1a0a2e;
+    --gradient-grid-bg: linear-gradient(135deg, #f59e0b, #ef4444, #ec4899, #d946ef, #8b5cf6);
+    --color-card-surface: rgba(255, 255, 255, 0.1);
+    --color-surface-popup: #0d0d0d;
+    --color-surface-action-button: #1a1a1a;
+
+    /* Text */
+    --color-text-primary: #ffffff;
+    --color-text-secondary: rgba(255, 255, 255, 0.7);
+    --color-text-muted: rgba(255, 255, 255, 0.5);
+
+    /* Accent */
+    --color-accent-primary: #f59e0b;
+    --color-accent-secondary: #ec4899;
+    --color-accent-primary-15: rgba(245, 158, 11, 0.15);
+    --color-accent-secondary-15: rgba(236, 72, 153, 0.15);
+
+    /* Tooltip */
+    --color-tooltip-bg: #1a0a2e;
+    --color-tooltip-text: #ec4899;
+
+    /* Swatch (Aurora reuses teal/midnight swatch colors for consistency) */
+    --color-swatch-teal-base: #071a2e;
+    --color-swatch-teal-accent: #f59e0b;
+    --color-swatch-midnight-base: #0a0f1e;
+    --color-swatch-midnight-accent: #ff6b6b;
+
+    /* Gradients */
+    --gradient-header-title: linear-gradient(90deg, #fbbf24, #ef4444, #ec4899, #d946ef, #8b5cf6);
+    --gradient-grid-bleed: none;
+
+    /* Shadows */
+    --shadow-card: 0 4px 6px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.2);
+    --shadow-card-hover-glow: 0 0 20px rgba(236, 72, 153, 0.3);
+    --shadow-header: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+    /* Aurora-specific element tokens deferred to respective phase discussions per CONTEXT.md */
   }
 }
