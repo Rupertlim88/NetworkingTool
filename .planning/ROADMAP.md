@@ -13,7 +13,7 @@ Twelve phases build the app from foundation through polished UI to cinematic ani
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Project Setup** - React + TypeScript + GSAP scaffold with self-contained component folder structure (completed 2026-03-05)
-- [ ] **Phase 2: Design Tokens + Theme System** - Three-tier CSS custom property architecture, ThemeProvider, localStorage persistence, flash prevention
+- [x] **Phase 2: Design Tokens + Theme System** - Three-tier CSS custom property architecture, ThemeProvider, localStorage persistence, flash prevention (completed 2026-03-10)
 - [ ] **Phase 3: Contact Grid + Cards** - 5-column responsive grid, portrait cards with circular photos, layered shadows, hover glow, Z-axis entrance animation
 - [ ] **Phase 4: Popup Overlay** - Card-expand animation via GSAP Flip, near-black surface, blur backdrop, content layout with bio/resume, Level Up button, action icons
 - [ ] **Phase 5: Grid Header** - Dual-mode header (static floating widget / fixed shelf), GSAP scroll morphing, Zone A/B logic, per-letter gradient title, theme swatches with tooltips, gear icon
@@ -54,7 +54,7 @@ Plans:
 **Plans**: 1 plan
 
 Plans:
-- [ ] 02-01-PLAN.md — Three-tier token architecture, ThemeProvider, flash prevention, theme types
+- [x] 02-01-PLAN.md — Three-tier token architecture, ThemeProvider, flash prevention, theme types
 
 ### Phase 3: Contact Grid + Cards
 **Goal**: A responsive 5-column contact grid with 30 placeholder portrait cards that have circular photos, layered shadows, hover scale+glow, and Z-axis entrance animation with GSAP ScrollTrigger stagger
@@ -204,7 +204,7 @@ Note: Phase 7 (Settings Drawer) depends only on Phase 2, not on Phases 3-6. Phas
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Project Setup | 2/2 | Complete | 2026-03-05 |
-| 2. Design Tokens + Theme System | 0/1 | Not started | - |
+| 2. Design Tokens + Theme System | 1/1 | Complete | 2026-03-10 |
 | 3. Contact Grid + Cards | 0/? | Not started | - |
 | 4. Popup Overlay | 0/? | Not started | - |
 | 5. Grid Header | 0/? | Not started | - |
