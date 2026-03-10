@@ -18,21 +18,21 @@ function StarIcon({ color }: { color: string }) {
   )
 }
 
-export function ContactCard({ name, photo, starLevel, starColor }: ContactCardProps) {
+export function ContactCard({ name, photo, role, company, starLevel, starColor }: ContactCardProps) {
   const fillColor = STAR_COLORS[starColor]
   const nameSize = name.length > 15 ? 'text-sm' : 'text-base'
 
   return (
     <div
-      className="rounded-2xl overflow-hidden flex flex-col items-center"
+      className="rounded-2xl overflow-hidden flex flex-col items-center w-full h-full"
       style={{
         aspectRatio: '3 / 4',
         background: 'var(--color-card-surface)',
         boxShadow: 'var(--shadow-card)',
       }}
     >
-      {/* Rounded rectangle photo — fills top ~55% of card */}
-      <div className="px-5 pt-5 w-full" style={{ flex: '0 0 55%' }}>
+      {/* Rounded rectangle photo — fills top ~58% of card */}
+      <div className="px-3 pt-3 w-full overflow-hidden" style={{ flex: '0 0 58%', minHeight: 0 }}>
         <img
           src={photo}
           alt={name}
@@ -47,6 +47,26 @@ export function ContactCard({ name, photo, starLevel, starColor }: ContactCardPr
       >
         {name}
       </p>
+
+      {/* Role */}
+      {role && (
+        <p
+          className="text-xs font-normal px-4 pt-1 text-center overflow-hidden whitespace-nowrap text-ellipsis w-full"
+          style={{ color: 'var(--color-text-primary)', opacity: 0.7 }}
+        >
+          {role}
+        </p>
+      )}
+
+      {/* Company */}
+      {company && (
+        <p
+          className="text-xs font-normal px-4 pt-0.5 text-center overflow-hidden whitespace-nowrap text-ellipsis w-full"
+          style={{ color: 'var(--color-text-primary)', opacity: 0.5 }}
+        >
+          {company}
+        </p>
+      )}
 
       {/* Stars */}
       <div className="mt-auto pb-4 flex items-center justify-center gap-1.5">

@@ -57,6 +57,8 @@ export default function Home() {
               <ContactCard
                 name={contact.name}
                 photo={contact.photo}
+                role={contact.role}
+                company={contact.company}
                 starLevel={contact.starLevel}
                 starColor={contact.starColor}
               />

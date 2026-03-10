@@ -37,6 +37,8 @@ body::-webkit-scrollbar {
 .contact-card {
   opacity: 0; /* Prevents flash before GSAP runs */
   transition: transform 200ms ease, box-shadow 200ms ease;
+  aspect-ratio: 3 / 4;
+  min-width: 0;
 }
 
 .contact-card:hover {
