@@ -44,6 +44,43 @@ body::-webkit-scrollbar {
   box-shadow: var(--shadow-card), var(--shadow-card-hover-glow);
 }
 
+/* Contact grid — constant gap-to-card ratio, 15.75vw side padding */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6vw;
+  padding-left: 15.75vw;
+  padding-right: 15.75vw;
+}
+
+@media (min-width: 580px) {
+  .contact-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5.7vw;
+  }
+}
+
+@media (min-width: 900px) {
+  .contact-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4.2vw;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contact-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 3.3vw;
+  }
+}
+
+@media (min-width: 2250px) {
+  .contact-grid {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2.7vw;
+  }
+}
+
 /* Aurora theme gradient background override */
 [data-theme="aurora"] .grid-page-bg {
   background: var(--gradient-grid-bg) !important;

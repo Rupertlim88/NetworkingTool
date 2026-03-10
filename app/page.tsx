@@ -51,7 +51,7 @@ export default function Home() {
         style={{ perspective: '1000px' }}
         className="relative z-10 pt-8 pb-16"
       >
-        <div className="grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-5 mx-auto max-w-[1400px] px-5">
+        <div className="contact-grid">
           {MOCK_CONTACTS.map((contact) => (
             <div key={contact.id} className="contact-card">
               <ContactCard
