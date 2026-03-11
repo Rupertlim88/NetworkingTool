@@ -130,6 +130,8 @@ body::-webkit-scrollbar {
     /* Background */
     --color-grid-bg: #071a2e;
     --color-card-surface: rgba(255, 255, 255, 0.08);
+    --color-card-surface-top: rgba(255, 255, 255, 0.11);
+    --color-card-surface-bottom: rgba(255, 255, 255, 0.05);
     --color-surface-popup: #0d0d0d;
     --color-surface-action-button: #1a1a1a;
 
@@ -159,7 +161,7 @@ body::-webkit-scrollbar {
     --gradient-grid-bleed: linear-gradient(180deg, rgba(245, 158, 11, 0.12) 0%, rgba(34, 211, 238, 0.08) 8%, transparent 20%);
 
     /* Shadows */
-    --shadow-card: 0 4px 6px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.2);
+    --shadow-card: 0 2px 4px rgba(0, 0, 0, 0.4), 0 8px 16px rgba(0, 0, 0, 0.3), 0 20px 40px rgba(0, 0, 0, 0.2);
     --shadow-card-hover-glow: 0 0 20px rgba(245, 158, 11, 0.3);
     --shadow-header: 0 2px 8px rgba(0, 0, 0, 0.15);
   }
@@ -169,6 +171,8 @@ body::-webkit-scrollbar {
     /* Background */
     --color-grid-bg: #0a0f1e;
     --color-card-surface: #111827;
+    --color-card-surface-top: #151d2e;
+    --color-card-surface-bottom: #0e1420;
     --color-surface-popup: #0d0d0d;
     --color-surface-action-button: #1a1a1a;
 
@@ -198,7 +202,7 @@ body::-webkit-scrollbar {
     --gradient-grid-bleed: linear-gradient(180deg, rgba(255, 107, 107, 0.12) 0%, rgba(79, 195, 247, 0.08) 8%, transparent 20%);
 
     /* Shadows */
-    --shadow-card: 0 4px 6px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.3);
+    --shadow-card: 0 2px 4px rgba(0, 0, 0, 0.5), 0 8px 16px rgba(0, 0, 0, 0.4), 0 20px 40px rgba(0, 0, 0, 0.25);
     --shadow-card-hover-glow: 0 0 20px rgba(255, 107, 107, 0.3);
     --shadow-header: 0 2px 8px rgba(0, 0, 0, 0.2);
   }
@@ -209,6 +213,8 @@ body::-webkit-scrollbar {
     --color-grid-bg: #1a0a2e;
     --gradient-grid-bg: linear-gradient(135deg, #f59e0b, #ef4444, #ec4899, #d946ef, #8b5cf6);
     --color-card-surface: rgba(255, 255, 255, 0.1);
+    --color-card-surface-top: rgba(255, 255, 255, 0.13);
+    --color-card-surface-bottom: rgba(255, 255, 255, 0.06);
     --color-surface-popup: #0d0d0d;
     --color-surface-action-button: #1a1a1a;
 
@@ -238,7 +244,7 @@ body::-webkit-scrollbar {
     --gradient-grid-bleed: none;
 
     /* Shadows */
-    --shadow-card: 0 4px 6px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.2);
+    --shadow-card: 0 2px 4px rgba(0, 0, 0, 0.4), 0 8px 16px rgba(0, 0, 0, 0.3), 0 20px 40px rgba(0, 0, 0, 0.2);
     --shadow-card-hover-glow: 0 0 20px rgba(236, 72, 153, 0.3);
     --shadow-header: 0 2px 8px rgba(0, 0, 0, 0.15);
 

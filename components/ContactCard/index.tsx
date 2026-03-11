@@ -24,13 +24,22 @@ export function ContactCard({ name, photo, role, company, starLevel, starColor }
 
   return (
     <div
-      className="rounded-2xl overflow-hidden flex flex-col items-center w-full h-full"
+      className="contact-card-inner rounded-2xl overflow-hidden flex flex-col items-center w-full h-full relative"
       style={{
         aspectRatio: '3 / 4',
-        background: 'var(--color-card-surface)',
+        background: 'linear-gradient(to bottom, var(--color-card-surface-top), var(--color-card-surface-bottom))',
         boxShadow: 'var(--shadow-card)',
+        border: 'clamp(1.5px, 0.15vw, 3px) solid var(--color-accent-secondary)',
       }}
     >
+      {/* Top edge highlight — simulates overhead light catching the edge */}
+      <div
+        className="absolute top-0 left-0 right-0 pointer-events-none"
+        style={{
+          height: '1px',
+          background: 'rgba(255, 255, 255, 0.12)',
+        }}
+      />
       {/* Rounded rectangle photo — fills top ~58% of card */}
       <div className="px-3 pt-3 w-full overflow-hidden" style={{ flex: '0 0 58%', minHeight: 0 }}>
         <img
