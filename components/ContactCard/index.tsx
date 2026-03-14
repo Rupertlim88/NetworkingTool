@@ -29,7 +29,7 @@ export function ContactCard({ name, photo, role, company, starLevel, starColor }
         aspectRatio: '3 / 4',
         background: 'linear-gradient(to bottom, var(--color-card-surface-top), var(--color-card-surface-bottom))',
         boxShadow: 'var(--shadow-card)',
-        border: 'clamp(1.5px, 0.15vw, 3px) solid var(--color-accent-secondary)',
+        border: 'clamp(1.5px, 0.15vw, 3px) solid var(--color-card-border, var(--color-accent-secondary))',
       }}
     >
       {/* Top edge highlight — simulates overhead light catching the edge */}

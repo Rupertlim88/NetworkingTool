@@ -49,7 +49,7 @@ body::-webkit-scrollbar {
   box-shadow: var(--shadow-card), var(--shadow-card-hover-glow);
 }
 
-/* Contact grid — constant gap-to-card ratio, 15.75vw side padding */
+/* Contact grid — quadratic gap scaling (gap ∝ card area), 15.75vw side padding */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -61,25 +61,25 @@ body::-webkit-scrollbar {
 
 @media (min-width: 580px) {
   .contact-grid {
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 9.5vw;
-    row-gap: 3.5vw;
+    grid-template-columns: repeat(2, var(--card-width, 1fr));
+    column-gap: var(--card-gap, 11.9vw);
+    row-gap: var(--row-gap, 3.5vw);
   }
 }
 
 @media (min-width: 900px) {
   .contact-grid {
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 7.7vw;
-    row-gap: 3vw;
+    grid-template-columns: repeat(3, var(--card-width, 1fr));
+    column-gap: var(--card-gap, 7.5vw);
+    row-gap: var(--row-gap, 3vw);
   }
 }
 
 @media (min-width: 1200px) {
   .contact-grid {
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 5.5vw;
-    row-gap: 2.5vw;
+    grid-template-columns: repeat(4, var(--card-width, 1fr));
+    column-gap: var(--card-gap, 5.5vw);
+    row-gap: var(--row-gap, 2.5vw);
   }
 }
 
@@ -130,9 +130,9 @@ body::-webkit-scrollbar {
   [data-theme="teal"] {
     /* Background */
     --color-grid-bg: #071a2e;
-    --color-card-surface: rgba(255, 255, 255, 0.08);
-    --color-card-surface-top: rgba(255, 255, 255, 0.11);
-    --color-card-surface-bottom: rgba(255, 255, 255, 0.05);
+    --color-card-surface: #1e5070;
+    --color-card-surface-top: #245878;
+    --color-card-surface-bottom: #1a4868;
     --color-surface-popup: #0d0d0d;
     --color-surface-action-button: #1a1a1a;
 
@@ -161,8 +161,11 @@ body::-webkit-scrollbar {
     --gradient-header-title: linear-gradient(90deg, #f59e0b, #fbbf24, #f5f5f5, #22d3ee, #0d9488);
     --gradient-grid-bleed: linear-gradient(180deg, rgba(245, 158, 11, 0.12) 0%, rgba(34, 211, 238, 0.08) 8%, transparent 20%);
 
+    /* Border */
+    --color-card-border: #f59e0b;
+
     /* Shadows */
-    --shadow-card: 0 2px 4px rgba(255, 255, 255, 0.07), 0 8px 16px rgba(255, 255, 255, 0.05), 0 20px 40px rgba(255, 255, 255, 0.03), 0 30px 40px -10px rgba(255, 255, 255, 0.08);
+    --shadow-card: 0 2px 4px rgba(0, 0, 0, 0.4), 0 8px 16px rgba(0, 0, 0, 0.3), 0 20px 40px rgba(0, 0, 0, 0.2), 0 30px 40px -10px rgba(0, 0, 0, 0.9);
     --shadow-card-hover-glow: 0 0 20px rgba(245, 158, 11, 0.3);
     --shadow-header: 0 2px 8px rgba(0, 0, 0, 0.15);
   }
@@ -171,9 +174,9 @@ body::-webkit-scrollbar {
   [data-theme="midnight"] {
     /* Background */
     --color-grid-bg: #0a0f1e;
-    --color-card-surface: #111827;
-    --color-card-surface-top: #151d2e;
-    --color-card-surface-bottom: #0e1420;
+    --color-card-surface: #1c2540;
+    --color-card-surface-top: #212c4a;
+    --color-card-surface-bottom: #182038;
     --color-surface-popup: #0d0d0d;
     --color-surface-action-button: #1a1a1a;
 
@@ -203,7 +206,7 @@ body::-webkit-scrollbar {
     --gradient-grid-bleed: linear-gradient(180deg, rgba(255, 107, 107, 0.12) 0%, rgba(79, 195, 247, 0.08) 8%, transparent 20%);
 
     /* Shadows */
-    --shadow-card: 0 2px 4px rgba(255, 255, 255, 0.07), 0 8px 16px rgba(255, 255, 255, 0.05), 0 20px 40px rgba(255, 255, 255, 0.03), 0 30px 40px -10px rgba(255, 255, 255, 0.08);
+    --shadow-card: 0 2px 4px rgba(0, 0, 0, 0.4), 0 8px 16px rgba(0, 0, 0, 0.3), 0 20px 40px rgba(0, 0, 0, 0.2), 0 30px 40px -10px rgba(0, 0, 0, 0.9);
     --shadow-card-hover-glow: 0 0 20px rgba(255, 107, 107, 0.3);
     --shadow-header: 0 2px 8px rgba(0, 0, 0, 0.2);
   }
